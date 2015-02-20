@@ -1,4 +1,4 @@
-# Copyright (c) 2015, Malte Schwarzkopf
+# Copyright (c) 2015, Matthew P. Grosvenor
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
