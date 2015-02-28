@@ -32,11 +32,11 @@
 
 file=$1
 expr=$2
-r2d2_dir=$3
+qjump_dir=$3
 
 
-$r2d2_dir/r2d2_fe2p_aps/dag_join2/bin/dag_join2 -V -i ${file}201_${expr} -I ${file}205_${expr}
-$r2d2_dir/r2d2_fe2p_aps/dag_analyse2/bin/dag_analyse2 -i erf-join.out -l -1 -p 3
+$qjump_dir/dag_join/bin/dag_join -V -i ${file}201_${expr} -I ${file}205_${expr}
+$qjump_dir/dag_analyse/bin/dag_analyse -i erf-join.out -l -1 -p 3
 cat erf.out | tr -s " " " " | cut -d" " -f 14 > out_${file}${expr}.lats
 
 ./do_hist.py out_${file}${expr}.lats 100
